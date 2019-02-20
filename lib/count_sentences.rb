@@ -15,6 +15,8 @@ self.end_with?("!")
   end
 
   def count_sentences
+  	#binding.pry
 self.scan(/[^.!?]+[.!?]/).map(&:strip).count
+#binding.pry
   end
 end
