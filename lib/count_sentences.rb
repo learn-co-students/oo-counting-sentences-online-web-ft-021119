@@ -15,13 +15,7 @@ class String
   end
 
   def count_sentences
-    arr = self.split(/\b(.!?)\s|\b(.!?)\z/)
-    arr.each do |item|
-      if item == /(!,.?)/
-        item.delete
-      end
-    end
-    binding.pry
+    arr = self.split(/[.?!](?=[\s])|[.?!]\z/)
     arr.count
   end
 end
